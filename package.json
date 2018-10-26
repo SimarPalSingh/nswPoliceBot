@@ -4,6 +4,7 @@
   "description": "NSW Police BOT",
   "main": "server.js",
   "dependencies": {
+    "express": "^4.16.4",
     "http": "^0.0.0",
     "is-url": "^1.2.4",
     "request": "^2.88.0",
