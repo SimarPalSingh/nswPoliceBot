@@ -9,7 +9,7 @@ app.get('/getRandom', function(req,res){
 });
 
 app.post('/getNearestLocations', async function (req, res) {
-    var stringToSearch = JSON.stringify(req.body).data;
+    var stringToSearch = JSON.parse(req.body).data;
  
     var data = await rp_async(`https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=~${stringToSearch}&inputtype=textquery&fields=photos,formatted_address,name,rating,opening_hours,geometry&key=AIzaSyBoJFhnn_8nwQltsj496SeNCN4lk03qf9w`,{method:'get'});
     data = JSON.parse(data);
