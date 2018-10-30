@@ -25,9 +25,9 @@ app.get('/getRandom', function(req,res){
 
 app.post('/getNearestLocations', async function (req, res) {
     console.log(req.body);
-    var stringToSearch = req.body.data;
+    var stringToSearch = req.body.data;//AIzaSyDPFM0v7qdeOc99d5VlfnRYMUgqs_gUxu4
     
-    var data = await rp_async(`https://maps.googleapis.com/maps/api/place/textsearch/json?query=${stringToSearch}&key=AIzaSyDPFM0v7qdeOc99d5VlfnRYMUgqs_gUxu4`,{method:'get'});
+    var data = await rp_async(`https://maps.googleapis.com/maps/api/place/textsearch/json?query=${stringToSearch}&key=AIzaSyBYmI-ajSqWSI7lzFwlpS2VndxFDB9AaCk`,{method:'get'});
   //  var data = await rp_async(`https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=~${stringToSearch}&inputtype=textquery&fields=photos,formatted_address,name,rating,opening_hours,geometry&key=AIzaSyBoJFhnn_8nwQltsj496SeNCN4lk03qf9w`,{method:'get'});
     data = JSON.parse(data);
     console.log(data);
